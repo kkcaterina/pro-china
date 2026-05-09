@@ -1,0 +1,12 @@
+:root {
+  --bg-color: #fff;
+  --surface-color: #fffaf2;
+  --text-primary-color: #000;
+  --text-secondary-color: #c23b22;
+  --accent-primary-color: #f1f1a0;
+  --accent-secondary-color: #ff5151;
+  --accent-tertiary-color: #730f0f;
+  --focus-color: #8a38f5;
+  --disabled-color: #67646b;
+  --overlay-color: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+}

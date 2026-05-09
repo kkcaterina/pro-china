@@ -1,0 +1,208 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  min-height: 100vh;
+  padding: 32px;
+  text-align: center;
+  background-image:
+    var(--overlay-color),
+    image-set(
+      url("../images/china.avif") type("image/avif"),
+      url("../images/china.jpg") type("image/jpeg")
+    );
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero__title {
+  color: var(--accent-primary-color);
+  font-weight: bold;
+  font-size: 100px;
+  line-height: 90%;
+  text-shadow: 7px 7px 0 var(--text-primary-color);
+}
+
+.hero__description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  color: var(--accent-primary-color);
+}
+
+.button {
+  width: 216px;
+  height: 53px;
+  border-radius: 20px;
+  padding: 16px 24px;
+  color: var(--bg-color);
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: var(--text-secondary-color);
+  transition:
+    background-color 0.2s ease-out,
+    color 0.2s ease-out;
+}
+
+.button:hover {
+  color: var(--text-primary-color);
+  background-color: var(--accent-secondary-color);
+}
+
+.button:active {
+  color: var(--accent-tertiary-color);
+  background-color: var(--accent-primary-color);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--focus-color);
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+  background-color: var(--surface-color);
+}
+
+.about__title,
+.advantages__title {
+  color: var(--text-secondary-color);
+  font-weight: bold;
+  font-size: 27px;
+  text-align: center;
+}
+
+.about__text,
+.advantages__text {
+  text-align: center;
+}
+
+.card__title {
+  color: var(--text-secondary-color);
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.about__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--text-secondary-color);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 5px 5px 0px 0 var(--text-secondary-color);
+  background-color: var(--bg-color);
+}
+
+.advantages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  padding: 32px;
+}
+
+.advantages__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border: 1px solid var(--text-secondary-color);
+  border-radius: 20px;
+  padding: 24px;
+  background-color: var(--surface-color);
+}
+
+.footer {
+  padding: 32px;
+  color: var(--accent-primary-color);
+  text-align: center;
+  background-color: var(--accent-tertiary-color);
+}
+
+@media (width >= 768px) {
+  .hero {
+    gap: 8px;
+  }
+
+  .hero__title {
+    font-size: 130px;
+  }
+
+  .hero__description {
+    gap: 200px;
+  }
+
+  .advantages__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .advantages__card {
+    justify-content: space-between;
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (width >= 1024px) {
+  .hero {
+    gap: 48px;
+  }
+
+  .hero__title {
+    font-size: 160px;
+  }
+
+  .hero__description {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .about {
+    gap: 32px;
+    padding: 64px;
+  }
+
+  .about__cards {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .about__card {
+    flex: 1 1 0;
+    max-width: 400px;
+  }
+
+  .advantages {
+    gap: 32px;
+    padding: 64px;
+  }
+}
